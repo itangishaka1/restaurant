@@ -1,3 +1,8 @@
+:root {
+  --main-color:  #ff0022;
+  --white-color: #fff;
+}
+
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
@@ -28,3 +33,4 @@ a {
 * {
   box-sizing: border-box;
 }
+

@@ -1,13 +1,14 @@
 .container {
     height: 10rem;
     padding: 0 5rem;
-    background-color: #ff0022;
+    background-color: var(--main-color);
 
     display: flex;
     align-items: center;
     justify-content: space-between;
     position: sticky;
     top: 0;
+    z-index: 999;
 }
 
 .item {
@@ -25,7 +26,7 @@
 }
 
 .callButton {
-    background-color: #fff;
+    background-color:var(--white-color);
     border-radius: 50%;
     padding: 1rem;
     width: 5rem;
@@ -34,7 +35,7 @@
 
 .texts {
     margin-left: 2rem;
-    color: #fff;
+    color: var(--white-color);
 }
 
 .text:first-child {
@@ -52,7 +53,7 @@
     display: flex;
     align-items: center;
     list-style: none;
-    color: #fff;
+    color: var(--white-color);
 }
 
 .listItem {
@@ -77,13 +78,13 @@
     width: 2rem;
     height: 2rem;
     border-radius: 50%;
-    background-color: #fff;
+    background-color: var(--white-color);
     padding: 0.3rem;
 
     display: flex;
     align-items: center;
     justify-content: center;
 
-    color: #ff0022;
+    color: var(--main-color);
     font-weight: bold;
 }

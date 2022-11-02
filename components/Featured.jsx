@@ -28,7 +28,7 @@ console.log(slideNum)
       <div className={styles.wrapper} style={{transform:`translateX(${-100 * slideNum}vw)`}}>
         {images.map((img, index) => (
           <div className={styles.imgContainer} key={index}>
-            <Image src={img} alt='featured'  style={{objectFit: 'contain'}}  width='500' height='500' />
+            <Image src={img} alt='featured'  style={{objectFit: 'contain'}}  width='600' height='400' />
           </div>
         ))}
       </div>
