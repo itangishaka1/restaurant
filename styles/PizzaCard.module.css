@@ -6,6 +6,12 @@
     justify-content: center;
     padding: 2rem 4rem;
     cursor: pointer;
+    transition: all 1s ease;
+}
+
+.container:hover {
+    background-color: #e8e8e9;
+    border-radius: 1rem;
 }
 
 .title, .price {
