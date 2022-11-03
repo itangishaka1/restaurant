@@ -1,0 +1,106 @@
+.container {
+    height: calc(100vh - 10rem);
+    display: flex;
+}
+
+.left {
+    flex: 1;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.right {
+    flex: 1;
+    padding: 2rem;
+    margin-top: 4rem;
+}
+
+.imgContainer {
+    width: 80%;
+    height: 80%;
+    position: relative;
+}
+
+.price {
+    color: var(--main-color);
+    font-size: 2.4rem;
+    font-weight: 400;
+    border-bottom: 1px solid var(--main-color);
+}
+
+.sizes {
+    width: 40%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.size {
+    width: 3rem;
+    height: 3rem;
+    position: relative;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.size:hover{
+    background-color: var(--main-color);
+    border-radius: 1rem;
+}
+
+.size:nth-child(2) {
+    width: 5rem;
+    height: 5rem;
+}
+
+.size:last-child {
+    width: 7rem;
+    height: 7rem;
+}
+
+.number {
+    position: absolute;
+    top: -5px;
+    right: -20px;
+
+    background-color: teal;
+    color: var(--white-color);
+    font-size: 1.2rem;
+    padding: 0 5px;
+    border-radius: 1rem;
+}
+
+.ingredients {
+    display: flex;
+    margin-bottom: 3rem;
+}
+
+.option {
+    display: flex;
+    align-items: center;
+    margin-right: 1rem;
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+
+.checkbox {
+    width: 2rem;
+    height: 2rem;
+}
+
+.quantity {
+    width: 5rem;
+    height: 3rem;
+}
+
+.btn {
+    height: 3rem;
+    margin-left: 1rem;
+    background-color: var(--main-color);
+    color: var(--white-color);
+    border: transparent;
+    font-weight: 500;
+    cursor: pointer;
+}
