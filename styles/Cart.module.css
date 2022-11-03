@@ -1,0 +1,59 @@
+.container {
+    padding: 5rem;
+
+    display: flex;
+}
+
+.left {
+    flex: 2;
+}
+
+.imgContainer {
+    width: 10rem;
+    height: 10rem;
+    position: relative;
+}
+
+.table {
+    width: 100%;
+    border-spacing: 2rem;
+    text-align: center;
+}
+
+.name {
+    color: var(--main-color);
+}
+
+.total, .name {
+    font-weight: 500;
+    font-size: 2rem;
+}
+
+
+.right {
+    flex: 1;
+}
+
+.wrapper {
+    width: 90%;
+    max-height: 30rem;
+    background-color: #333;
+    padding: 1rem 5rem 5rem;
+    color: var(--white-color);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.totalTextTitle {
+    margin-right: 1rem;
+}
+
+.btn {
+    height: 3rem;
+    color: var(--main-color);
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 2rem;
+}
