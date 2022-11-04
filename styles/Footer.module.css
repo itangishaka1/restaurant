@@ -33,3 +33,26 @@
 .motto {
     color: rgb(211, 211, 211);
 }
+
+@media screen and (max-width: 480px) {
+    .container {
+        height: auto;
+        /* text-align: center; */
+        padding-left: 0rem;
+    }
+    .item:first-child{
+        display: none;
+    }
+
+    .item:nth-child(2){
+        flex-direction: column;
+    }
+
+    .title {
+        font-size: 2.4rem;
+    }
+
+    .text {
+        font-size: 1.8rem;
+    }
+}

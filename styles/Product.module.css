@@ -104,3 +104,44 @@
     font-weight: 500;
     cursor: pointer;
 }
+
+@media screen and (max-width: 480px) {
+    .container {
+        height: auto;
+        text-align: center;
+        flex-direction: column;
+        margin-top: 2rem;
+    }
+
+    .imgContainer {
+        width: 70vw;
+        height: 70vw;
+    }
+
+    .title {
+        margin: .5rem;
+    }
+
+    .sizes{
+        width: 100%;
+        padding: 0 2rem;
+    }
+
+    .right {
+        margin-top: 0;
+    }
+
+    .ingredients {
+        flex-direction: column;
+    }
+
+    .option {
+        margin: 1rem;
+        font-size: 1.8rem;
+    }
+
+    .quantity, .btn {
+        height: 5rem;
+        padding: 1rem 2rem;
+    }
+}
