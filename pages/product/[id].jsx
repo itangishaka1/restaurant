@@ -4,11 +4,18 @@ import { useState } from 'react'
 import axios from 'axios'
 import Link from 'next/link'
 
+import { useDispatch } from 'react-redux'
+import { addProduct } from '../../redux/cartSlice'
+
 const Product = ({ pizza }) => {
   const [price, setPrice] = useState(pizza.prices[0]) 
   const [size, setSize] = useState(0) // size index
   const [extras, setExtras] = useState([]) 
   const [qty, setQty] = useState(1) 
+
+  console.log('out: ', qty)
+
+  const dispatch = useDispatch()
 
   const changePrice = (number) => {
      setPrice(price + number)
@@ -31,6 +38,12 @@ const Product = ({ pizza }) => {
         setExtras(extras.filter(extra => extra._id !== option._id))
       }
   }
+
+  const handleClick = () => {
+    dispatch(addProduct({...pizza, extras, price, qty}))
+    console.log('inside: ', qty)
+  }
+
   return (
     <section className={styles.container}>
       <div className={styles.left}>
@@ -84,9 +97,9 @@ const Product = ({ pizza }) => {
         </section>
         <div className={styles.add}>
             <input type="number" defaultValue={qty} onChange={(e=>setQty(e.target.value))} className={styles.quantity} />
-            <Link href='/Cart' passHref> 
-             <button className={styles.btn}>Add to Cart</button>
-            </Link>
+            {/* <Link href='/Cart' passHref>  */}
+             <button className={styles.btn} onClick={handleClick}>Add to Cart</button>
+            {/* </Link> */}
         </div>
       </div>
     </section>

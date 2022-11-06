@@ -6,9 +6,9 @@ const Featured = () => {
     const [slideNum, setSlideNum ] = useState(0)
 
   const images = [
-      '/images/featured2.png',
-      '/images/featured.png',
-    '/images/featured3.png',
+      '/images/pizza9.png',
+      '/images/pizza7.png',
+    '/images/pizzab.png',
   ]
 
   const handleArrow = (direction) => {
@@ -28,7 +28,7 @@ console.log(slideNum)
       <div className={styles.wrapper} style={{transform:`translateX(${-100 * slideNum}vw)`}}>
         {images.map((img, index) => (
           <div className={styles.imgContainer} key={index}>
-            <Image src={img} alt='featured'  style={{objectFit: 'contain'}}  width='600' height='400' />
+            <Image src={img} alt='featured'  style={{objectFit: 'contain'}}  width='900' height='400' />
           </div>
         ))}
       </div>
