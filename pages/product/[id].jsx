@@ -13,7 +13,6 @@ const Product = ({ pizza }) => {
   const [extras, setExtras] = useState([]) 
   const [qty, setQty] = useState(1) 
 
-  console.log('out: ', qty)
 
   const dispatch = useDispatch()
 
@@ -41,7 +40,6 @@ const Product = ({ pizza }) => {
 
   const handleClick = () => {
     dispatch(addProduct({...pizza, extras, price, qty}))
-    console.log('inside: ', qty)
   }
 
   return (

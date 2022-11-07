@@ -3,7 +3,6 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 const PizzaCard = ({ pizza }) => {
-  console.log(pizza)
   return (
     <article className={styles.container}>
       <Link href={`/product/${pizza._id}`} passHref>

@@ -21,7 +21,9 @@ const NavBar = () => {
       </article>
       <article className={styles.item}>
         <ul className={styles.list}>
+          <Link href='/' passHref>
           <li className={styles.listItem}>Home</li>
+          </Link>
           <li className={styles.listItem}>Products</li>
           <li className={styles.listItem}>Menu</li>
           <div className={styles.logo}>YourPizza</div>

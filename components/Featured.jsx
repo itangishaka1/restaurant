@@ -19,7 +19,6 @@ const Featured = () => {
         setSlideNum( slideNum !== 2 ? slideNum + 1 : 0)
     }
   }
-console.log(slideNum)
   return (
     <section className={styles.container}>
       <div className={styles.arrowContainer} style={{ left: 0 }} onClick={()=>handleArrow('l')}>
