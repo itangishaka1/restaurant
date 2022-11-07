@@ -10,6 +10,11 @@ const Featured = () => {
       '/images/pizza7.png',
     '/images/pizzab.png',
   ]
+//   const images = [
+//     '/images/featured2.png',
+//     '/images/featured.png',
+//   '/images/featured3.png',
+// ]
 
   const handleArrow = (direction) => {
     if(direction === 'l'){
