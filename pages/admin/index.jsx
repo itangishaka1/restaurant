@@ -103,7 +103,17 @@ const Index = ({ orders, products }) => {
   )
 }
 
-export const getServerSideProps = async () => {
+export const getServerSideProps = async (context) => {
+    const myCookie = context.req?.cookies || ""
+
+    if(myCookie.token !== process.env.TOKEN){
+      return {
+        redirect: {
+          destination: '/admin/login',
+          permanent: false
+        }
+      }
+    }
     const productList = await axios.get("http://localhost:3000/api/product/")
     const orders = await axios.get("http://localhost:3000/api/orders/")
 
