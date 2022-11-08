@@ -2,8 +2,9 @@ import dbConnect from "../../../util/mongo"
 import Product from '../../../models/Product'
 
 export default async function handler(req, res) {
-    const { method, query: { id } } = req
+    const { method, cookies, query: { id } } = req
 
+    const token = cookies.token
     dbConnect()
 
     if(method === 'GET'){
@@ -17,6 +18,9 @@ export default async function handler(req, res) {
     }
 
     if(method === 'PUT'){
+        if(!token || token !== process.env.TOKEN) {
+            return res.status(401).json("Not Authenticated")
+        }
         // try {
         //     // const product = await  Product.findByIdAndUpdate(id, req.body, {new:true})
         //     // res.status(201).json(product)
@@ -26,6 +30,10 @@ export default async function handler(req, res) {
     }
 
     if(method === 'DELETE'){
+        if(!token || token !== process.env.TOKEN) {
+            return res.status(401).json("Not Authenticated")
+        }
+
         try {
             await  Product.findByIdAndDelete(id)
             res.status(200).json(`${id} has been deleted!`)

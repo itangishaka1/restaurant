@@ -1,0 +1,95 @@
+.container {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(245, 240, 240, 0.52);
+    position: fixed;
+    top: 0;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+}
+
+.wrapper {
+    width: 50rem;
+    background-color: var(--white-color);
+    padding:1rem 5rem;
+    border-radius: 2rem;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    position: relative;
+}
+
+.close {
+    position: absolute;
+    top: -1rem;
+    right: -1rem;
+    width: 3rem;
+    height: 3rem;
+    background-color: black;
+    color: var(--white-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+
+.label {
+    margin-bottom: 0.5rem;
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+
+.input {
+    border: none;
+    border-bottom: 1px solid grey;
+    outline: none;
+}
+
+.priceContainer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.inputSm {
+    width: 25%;
+}
+
+.extra {
+    display: flex;
+    justify-content: space-between;
+}
+
+.extraItems {
+    margin: 1rem 0rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+.extraItem {
+    padding: 0.5rem;
+    font-size: 1.4rem;
+    border: 1px solid tomato;
+    background-color: var(--white-color);
+    color: tomato;
+    margin: 0 1rem .5rem 0;
+    border-radius: 1rem;
+}
+
+.addBtn {
+    width: 25%;
+    border: none;
+    background-color: teal;
+    color: var(--white-color);
+    font-weight: 500;
+    cursor: pointer;
+    padding: 0.5rem 0;
+    align-self: flex-end;
+}
